@@ -1,0 +1,494 @@
+
+
+.hero-container{
+    display: flex;
+    
+}
+
+.img-container, .hero-content-container{
+    height: 88vh;
+    align-items: center;
+    display: flex;
+}
+nav{
+    width: 100%;
+}
+
+.img-container{
+    width: 40%;
+    justify-content: right;
+}
+
+.hero-content-container{
+    padding-left: 100px;
+}
+
+
+.my-image{
+    width: 70%;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+.hero-btn-container{
+    display: flex;
+    gap: 40px;
+}
+
+.resumeBtn, .contactBtn{
+    padding: 3% 10%;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.resumeBtn{
+    background-color: #2166F2;
+    color: #d4d3db;
+ 
+}
+
+.contactBtn{
+    border: 1px solid #545257;
+    color: #545257;
+}
+
+.resumeBtn:hover, .contactBtn:hover{
+    cursor: pointer;
+    background-color: #1C2131;
+    color: white;
+    border: none;
+}
+h1{
+    font-size: 5rem;
+    margin-bottom: 0;
+    color: #1C2131;
+}
+
+.subheading{
+    font-size: 2rem;
+    color: #AFAEB3;
+}
+
+.hero-sub{
+    color: #A1A0A3;
+}
+
+
+/*SERVICES STYLES*/
+.services-container{
+    height: 100vh;
+    align-content: center;
+    min-height: max-content;
+}
+
+.services-contents{
+    display: grid;
+    grid-template-columns: 25% 25% 25% ;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    gap: 5px;
+  
+}
+.service-skill{
+    border: 2px solid #EED9D9;
+    padding: 15% 10% ;
+    margin: 5% 0;
+}
+.serviceHeading{
+    text-align: center;
+    padding: 10px 20%;
+}
+.skill-sub-heading{
+    color: #2166F2;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: relative;
+    top: 20px;
+}
+
+.service-icon{
+    width: 60px;
+    height: 60px;
+}
+@media screen and (max-width:700px){
+    .services-container{
+        height: fit-content;
+       
+        
+    }
+    
+}
+
+/*ABOUT STYLES*/
+.about-container{
+    height: 100vh;
+    min-height: max-content;
+    align-content: center;
+}
+.about-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+.about-image{
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.aboutHeading{
+    color: #2166F2;
+  
+}
+.about-details{
+    padding:  0 50px;
+    justify-content: center;
+    align-content: center;
+}
+.about-details p{
+    line-height: 30px;
+    text-align: justify;
+}
+
+.about-image-content{
+    height: 80%;
+    background: url(images/about-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:0px 50px 50px 0px;    
+}
+
+/*MOBILE VIEW ABOUT*/
+@media screen and (max-width:700px){
+    .about-content{
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+    .about-container{
+        height: fit-content;
+        margin: 50px 0 ;
+    }
+    
+    .about-image{
+        height:fit-content;
+        padding: 0 5% 5% 5%;
+        justify-content: center;
+        align-content:start;
+    }
+    
+    .about-image-content{
+        height: 300px;
+        border-radius:10px;    
+    }
+    .about-details{
+        justify-content: left;
+        
+    }
+}
+
+
+/*DISHES STYLES*/
+.dishes-container{
+    height: 100vh;
+    min-height: max-content;
+    text-align: center;
+
+    align-content: center;
+    margin: 5% 5%;
+ 
+}
+
+.dishesHeading{
+    color: #1D69F8;
+    margin-bottom: 0;
+}
+
+.dishHeading-container{
+    margin-bottom: 50px;
+}
+.dishSubHeading{
+    padding: 0 30%;
+    line-height: 25px;
+}
+
+.signature-dishes-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.dish{
+    height: 70vh;
+    border-radius: 15px;
+}
+
+.dish img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+    
+}
+.dish {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.dish img {
+    display: block;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+.dish::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.219);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.dish p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay and text on hover */
+.dish:hover::after,
+.dish:hover p {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*MOBILE VIEW Dishes*/
+@media screen and (max-width:700px){
+    .signature-dishes-container{
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+    
+}
+
+/*CONTACTS STYLES*/
+.contacts-container{
+    height: 100vh;
+    min-height: max-content;
+   padding: 2% 20% 5% 20%;
+    color: #FFFFFF;
+    background-color: #1D75F8;
+    align-content: center;
+}
+.contactHeading-container{
+    text-align: center;
+}
+.contactHeading{
+    margin-bottom: 0;
+}
+.contactSubHeading{
+    color: #ffffffb7;
+    line-height: 25px;
+    padding: 0 20%;
+}
+.contacts-content-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    min-height: max-content;
+}
+
+.form-container,.contact-details-container{
+    height: inherit;
+    padding: 50px 10%;
+
+}
+.form-container{
+    background-color: #4082FF;
+    align-content: center;
+}
+
+.contact-details-container{
+    background-color: #2166F2;
+}
+
+input, textarea{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #CABEBE;
+    border-radius: 5px;
+    margin: 5px 0 10px 0;
+    padding: 10px 5px;
+}
+input::placeholder, textarea::placeholder{
+        color: #ffffff94;
+}
+label{
+    color: #ffffffb7;
+}
+textarea{
+    resize: none;
+    height: 100px;
+}
+
+.sendMsg{
+    background-color: #74A4FF;
+    width: 100%;
+    padding: 10px 0 ;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.sendMsg:hover{
+    cursor: pointer;
+    background-color: #1D69F8;
+}
+.contacts-details p{
+   display: flex;
+   gap: 10px;
+   color: #ffffff94;
+}
+.contact-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.msg-icon{
+    width: 100%;
+    height: 70%;
+}
+@media screen and (max-width:1000px) {
+    .contactSubHeading,.dishSubHeading{
+        padding: 0 ;
+    }
+}
+@media screen and (max-width:700px) {
+    .contactSubHeading,.dishSubHeading{
+        padding: 0 ;
+    }
+
+    .contacts-content-container{
+        display: grid;
+        grid-template-columns: auto;
+        align-content: center;
+        min-height: max-content;
+    }
+
+    .contacts-container{
+        padding: 20% 0;
+     
+    }
+
+
+    .contact-icon{
+        width: 15px;
+        height: 15px;
+    }
+
+    .form-container,.contact-details-container{
+        height: inherit;
+        padding: 10% 10%;
+    }   
+    
+}
+
+
+@media screen and (max-width:400px) {
+    .contactSubHeading,.dishSubHeading{
+        padding: 0 ;
+    }
+
+    .contacts-content-container{
+        display: grid;
+        grid-template-columns: auto;
+        align-content: center;
+        min-height: max-content;
+    }
+    
+}
+
+
+
+
+
+@media screen and (max-width:700px) {
+    
+    .hero-container{
+        display: block;
+        height: 90vh;
+        align-content: center;
+    }
+    .img-container, .hero-content-container{
+        height: fit-content;
+        align-items: center;
+        display: flex;
+ 
+    }
+
+    .img-container{
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+    }
+    
+    .my-image{
+        width: 70%;
+        height: 230px;
+        border-radius: 1500px;
+    }
+
+    
+    .hero-content-container{
+        padding-left: 0px;
+        justify-content: center;
+        
+    }
+
+    .contacts-container{
+
+       padding: 2% 5% 5% 5%;
+        color: #FFFFFF;
+        background-color: #1D75F8;
+     
+    }
+
+
+    .contact-icon{
+        width: 15px;
+        height: 15px;
+    }
+
+    .form-container,.contact-details-container{
+        height: inherit;
+        padding: 10% 10%;
+    
+    }
+   
+}
+
+@media screen and (max-width:600px){
+    .serviceHeading{
+        
+        padding: 10px 10%;
+    }
+}

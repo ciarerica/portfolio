@@ -1,0 +1,117 @@
+a{
+    text-decoration: none;
+    color: #AFAEB3;
+}
+
+.navigationLinks{
+    display: flex;
+    gap: 40px;
+    justify-content: right;
+    padding-right: 50px;
+}
+nav{
+    height: 80px;
+    justify-content: right;
+    align-items: center;
+    align-content: center;
+    
+}
+
+ul li {
+    list-style: none;
+}
+
+
+.link:hover{
+    color: #2166F2;
+    cursor: pointer;
+}
+
+#hireMe{
+    background-color:#2166F2;
+    padding: 10px;
+    border-radius: 5px;
+    color: #eaeaec;
+}
+
+#hireMe:hover{
+    cursor: pointer;
+    background-color: #1C2131;
+
+    border: none;
+}
+
+.active{
+    color: #2166F2;
+}
+
+.menu-icons{
+    display: none;
+    color: #2166F2;
+}
+
+.menu-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: right;
+    list-style: none;
+    padding:10px 20px;
+    z-index: 5;
+}
+
+
+.link-container{
+    width: 100%;
+    height: fit-content;
+    padding: 5% 0;
+}
+.hyperLink-container a{
+   color: white;
+}
+.hyperLink-container:hover{
+    background-color:#2166F2;
+    cursor: pointer;
+}
+
+.iconHeader{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: -20px;
+}
+.iconHero{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 20px;
+}
+
+@media screen and (max-width:1200px) {
+    .closeIcon{
+        display: none;
+    }
+    ul li{
+        padding-right: 0px;
+    }
+    
+    .navigationLinks{
+        display: none;
+    }
+    .menu-container{
+        display: block;
+    }
+    .hyperLink-container{
+        display: none;
+        text-align: center;
+        width: 100%;
+       padding: 20px 0;
+    }
+    
+    .menu-icons{
+        display: block;
+        font-size: 2rem;
+    }
+    
+}
